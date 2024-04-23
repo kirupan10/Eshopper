@@ -1,0 +1,9 @@
+# (A) REWRITE ON
+RewriteEngine on
+ 
+# (B) DO NOT OVERRIDE EXISTING FOLDERS
+RewriteCond %{REQUEST_FILENAME} !-d
+ 
+# (C) REWRITE PHP FILES ONLY
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
