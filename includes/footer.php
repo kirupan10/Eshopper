@@ -19,11 +19,11 @@
 						<div class="single-widget">
 							<h2>Quock Shop</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Breakfast Recipes</a></li>
-								<li><a href="#">Lunch Recipes</a></li>
-								<li><a href="#">Dinner Recipes</a></li>
-								<li><a href="#">Dissert Recipes</a></li>
-								<li><a href="#">Special Recipes</a></li>
+								<li><a href="catagory?pid=1">Breakfast Recipes</a></li>
+								<li><a href="catagory?pid=2">Lunch Recipes</a></li>
+								<li><a href="catagory?pid=3">Dinner Recipes</a></li>
+								<li><a href="catagory?pid=4">Dissert Recipes</a></li>
+								<li><a href="catagory?pid=5">Special Recipes</a></li>
 							</ul>
 						</div>
 					</div>
