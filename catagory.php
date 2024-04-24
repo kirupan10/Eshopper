@@ -198,34 +198,34 @@ if($_GET['pid']){
 							</div>
 							
 						</div><!--/category-products-->
-<?php $rt=mysqli_query($con,"select * from products where category= '1'");
-$num=mysqli_num_rows($rt);{
-}
-?>	
-<?php $rt1=mysqli_query($con,"select * from products where category= '2'");
-$num1=mysqli_num_rows($rt1);{
-}
-?>	
-<?php $rt2=mysqli_query($con,"select * from products where category= '3'");
-$num2=mysqli_num_rows($rt2);{
-}
-?>	
-<?php $rt3=mysqli_query($con,"select * from products where category= '4'");
-$num3=mysqli_num_rows($rt3);{
-}
-?>	
-<?php $rt4=mysqli_query($con,"select * from products where category= '6'");
-$num4=mysqli_num_rows($rt4);{
-}
-?>	
-<?php $rt5=mysqli_query($con,"select * from products where category= '7'");
-$num5=mysqli_num_rows($rt5);{
-}
-?>	
-<?php $rt6=mysqli_query($con,"select * from products where category= '5'");
-$num6=mysqli_num_rows($rt6);{
-}
-?>					
+							<?php $rt=mysqli_query($con,"select * from products where category= '1'");
+								$num=mysqli_num_rows($rt);{
+								}
+							?>	
+							<?php $rt1=mysqli_query($con,"select * from products where category= '2'");
+								$num1=mysqli_num_rows($rt1);{
+								}
+							?>	
+							<?php $rt2=mysqli_query($con,"select * from products where category= '3'");
+								$num2=mysqli_num_rows($rt2);{
+								}
+							?>	
+							<?php $rt3=mysqli_query($con,"select * from products where category= '4'");
+								$num3=mysqli_num_rows($rt3);{
+								}
+							?>	
+							<?php $rt4=mysqli_query($con,"select * from products where category= '6'");
+								$num4=mysqli_num_rows($rt4);{
+								}
+							?>	
+							<?php $rt5=mysqli_query($con,"select * from products where category= '7'");
+								$num5=mysqli_num_rows($rt5);{
+								}
+							?>	
+							<?php $rt6=mysqli_query($con,"select * from products where category= '5'");
+								$num6=mysqli_num_rows($rt6);{
+								}
+							?>					
 						<div class="brands_products"><!--brands_products-->
 							<h2>Recipes</h2>
 							<div class="brands-name">
@@ -246,14 +246,41 @@ $num6=mysqli_num_rows($rt6);{
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Features Items</h2>
-<?php
-$ret=mysqli_query($con,"select * from products where category='$pid' limit 6;");
-while ($row=mysqli_fetch_array($ret)) {
-	# code...
+					<?php 
 
+					switch ($pid){
+						case 1:
+							$label = "Breakfast Recipes";
+							break;
+						case 2: 
+							$label = "Lunch Recipes";
+							break;
+						case 3: 
+							$label = "Dinner Recipes";
+							break;
+						case 4:
+							$label = "Dissert Recipes";
+							break;
+						case 5:
+							$label = "Special Recipes";
+							break;
+						case 6: 
+							$label = "Soft Drink";
+							break;
+						case 7:
+							$label = "Juices";
+							break;
+						default:
+							$label = "Recipes";
+							break;
 
-?>
+						}
+					?>
+						<h2 class="title text-center"><?php echo $label ?></h2>
+						<?php
+							$ret=mysqli_query($con,"select * from products where category='$pid' limit 6;");
+							while ($row=mysqli_fetch_array($ret)) {
+						?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
@@ -287,10 +314,7 @@ while ($row=mysqli_fetch_array($ret)) {
 		</div>
 	</section>
 	
-<?php include('includes/footer.php'); ?>
-	
-
-  
+	<?php include('includes/footer.php'); ?>
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
