@@ -18,7 +18,7 @@ if($_GET['pid']){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Catagory | E-Shopper</title>
+    <title>Catagory | Friends Corner</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -157,10 +157,6 @@ if($_GET['pid']){
 					<div class="left-sidebar">
 						<h2>Category</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-							
-							
-							
-							
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="catagory?pid=1">Breakfast Recipes</a></h4>

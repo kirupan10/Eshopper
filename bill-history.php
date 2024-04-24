@@ -80,7 +80,7 @@ echo "<script>alert('Shipping Address has been updated');</script>";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Bill | E-Shopper</title>
+    <title>Bill | Friends Corner</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -134,7 +134,7 @@ while($row1=mysqli_fetch_array($query))
 				<tr>
 					<th class="cart-romove item">Bill Number :BDCS176<?php echo htmlentities($row['bill_no']);?> </th>
 					<?php $_SESSION['bill_no']=$row['bill_no'];?>
-					<th class="cart-romove item">E-Shopper (Pvt) Ltd</th>
+					<th class="cart-romove item">Friends Corner (Pvt) Ltd</th>
 					<th colspan="3" class="cart-romove item">No:31, Kovil St, Nallur, Jaffna, Sri Lanka</th>
 					<th class="cart-romove item"> <?php echo htmlentities($row['orderDate']);?></th>
 					<?php $_SESSION['orderDate']=$row['orderDate'];?>

@@ -53,7 +53,7 @@ $email = $row123['email'];
       </div>
       <h1>BDCS176<?php echo $_SESSION['bill_no'];?></h1>
       <div id="company" class="clearfix">
-        <div>E-Shopper (pvt) Ltd</div>
+        <div>Friends Corner (pvt) Ltd</div>
         <div>No:31, Kovil St, Nallur, <br /> Jaffna, Sri Lanka</div>
         <div>0777123456</div>
         <div><a href="mailto:Eshopper@company.com">Eshopper@company.com</a></div>
