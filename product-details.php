@@ -9,7 +9,7 @@ if($_GET['pid']){
 	}
 	
 }else{
-	header("location:/eshopper");
+	header("location:/Friends-Corner");
 }
 if(isset($_POST['reviewsubmit'])){
 $name=$_POST['name'];
@@ -56,7 +56,7 @@ if($query){
 			<div class="row">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="/eshopper">Home</a></li>
+				  <li><a href="/Friends-Corner">Home</a></li>
 				  <li class="active">Product details</li>
 				</ol>
 			</div>

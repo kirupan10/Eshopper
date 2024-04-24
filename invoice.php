@@ -56,7 +56,7 @@ $email = $row123['email'];
         <div>Friends Corner (pvt) Ltd</div>
         <div>No:31, Kovil St, Nallur, <br /> Jaffna, Sri Lanka</div>
         <div>0777123456</div>
-        <div><a href="mailto:Eshopper@company.com">Eshopper@company.com</a></div>
+        <div><a href="mailto:Friends-Corner@company.com">Friends-Corner@company.com</a></div>
       </div>
       <div id="project">
         <div><span>CLIENT</span> <?php echo $_SESSION['username'];?></div>

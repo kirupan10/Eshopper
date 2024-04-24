@@ -8,7 +8,7 @@ if($_GET['pid']){
 	}
 	
 }else{
-	header("location:/eshopper");
+	header("location:/Friends-Corner");
 }
 
 ?>
@@ -46,7 +46,7 @@ if($_GET['pid']){
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
 								<li><a href=""><i class="fa fa-phone"></i> +94 123 456 7890</a></li>
-								<li><a href=""><i class="fa fa-envelope"></i> contact@Eshopper.com</a></li>
+								<li><a href=""><i class="fa fa-envelope"></i> contact@Friends-Corner.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -70,7 +70,7 @@ if($_GET['pid']){
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="/eshopper"><img src="images/home/logo.png" alt="" /></a>
+							<a href="/Friends-Corner"><img src="images/home/logo.png" alt="" /></a>
 						</div>
 						<form action="search" method="POST">
 						<div class="search_box pull-right">
