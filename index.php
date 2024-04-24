@@ -58,9 +58,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							
 						</ol>
-						
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
@@ -86,10 +84,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 									<img src="images/home/pri cing.png"  class="pricing" alt="" />
 								</div>
 							</div>
-							
 						</div>
-						
-						
 						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
 							<i class="fa fa-angle-left"></i>
 						</a>
@@ -110,10 +105,6 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 					<div class="left-sidebar">
 						<h2>Category</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-							
-							
-							
-							
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="catagory?pid=1">Breakfast Recipes</a></h4>
@@ -152,31 +143,31 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							
 						</div><!--/category-products-->
 							<?php $rt=mysqli_query($con,"select * from products where category= '1' ");
-							$num=mysqli_num_rows($rt);{
+								$num=mysqli_num_rows($rt);{
 							}
 							?>	
 							<?php $rt1=mysqli_query($con,"select * from products where category= '2'");
-							$num1=mysqli_num_rows($rt1);{
+								$num1=mysqli_num_rows($rt1);{
 							}
 							?>	
 							<?php $rt2=mysqli_query($con,"select * from products where category= '3'");
-							$num2=mysqli_num_rows($rt2);{
+								$num2=mysqli_num_rows($rt2);{
 							}
 							?>	
 							<?php $rt3=mysqli_query($con,"select * from products where category= '4'");
-							$num3=mysqli_num_rows($rt3);{
+								$num3=mysqli_num_rows($rt3);{
 							}
 							?>	
 							<?php $rt4=mysqli_query($con,"select * from products where category= '6'");
-							$num4=mysqli_num_rows($rt4);{
+								$num4=mysqli_num_rows($rt4);{
 							}
 							?>	
 							<?php $rt5=mysqli_query($con,"select * from products where category= '7'");
-							$num5=mysqli_num_rows($rt5);{
+								$num5=mysqli_num_rows($rt5);{
 							}
 							?>	
 							<?php $rt6=mysqli_query($con,"select * from products where category= '5'");
-							$num6=mysqli_num_rows($rt6);{
+								$num6=mysqli_num_rows($rt6);{
 							}
 							?>					
 						<div class="brands_products"><!--brands_products-->
@@ -193,14 +184,6 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 								</ul>
 							</div>
 						</div><!--/brands_products-->
-						
-						<div class="price-range"><!--price-range-->
-							<h2>Price Range</h2>
-							<div class="well text-center">
-								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-							</div>
-						</div><!--/price-range-->
 					</div>
 				</div>
 				
@@ -208,11 +191,8 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Features Items</h2>
 							<?php
-							$ret=mysqli_query($con,"select * from products where category=3 limit 3;");
-							while ($row=mysqli_fetch_array($ret)) {
-								# code...
-
-
+								$ret=mysqli_query($con,"select * from products where category=3 limit 3;");
+								while ($row=mysqli_fetch_array($ret)) {
 							?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
@@ -234,7 +214,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										
 									</ul>
 								</div>
 							</div>
@@ -244,11 +224,11 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 					
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Features Items</h2>
-<?php
-$ret=mysqli_query($con,"select * from products where category=2 limit 3;");
-while ($row=mysqli_fetch_array($ret)) {
-	# code...
-?>
+						<?php
+							$ret=mysqli_query($con,"select * from products where category=2 limit 3;");
+							while ($row=mysqli_fetch_array($ret)) {
+
+						?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
@@ -269,7 +249,7 @@ while ($row=mysqli_fetch_array($ret)) {
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										
 									</ul>
 								</div>
 							</div>
@@ -278,13 +258,11 @@ while ($row=mysqli_fetch_array($ret)) {
 					</div>
 	
 						<h2 class="title text-center">Features Items</h2>
-<?php
-$ret=mysqli_query($con,"select * from products where category=4 limit 3;");
-while ($row=mysqli_fetch_array($ret)) {
-	# code...
+						<?php
+							$ret=mysqli_query($con,"select * from products where category=4 limit 3;");
+							while ($row=mysqli_fetch_array($ret)) {
 
-
-?>
+						?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
@@ -305,122 +283,18 @@ while ($row=mysqli_fetch_array($ret)) {
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										
 									</ul>
 								</div>
 							</div>
 						</div>
 						<?php }?>
 					</div>
-					
-					
-					
 				</div>
 			</div>
-			
-<!--recommended_items			<div class="recommended_items">
-						<h2 class="title text-center">recommended items</h2>
-						
-						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="item active">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
-							  </a>
-							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-							  </a>			
-						</div>
-					</div><!--/recommended_items-->
-		</div>
 	</section>
 	
-<?php include('includes/footer.php'); ?>
-	
-
-  
+	<?php include('includes/footer.php'); ?>
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
