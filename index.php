@@ -65,17 +65,30 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							<div class="item active">
 								<div class="col-sm-6">
 									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Shopping Now</h2>
-									<p>Now , We're providing free shopping around island wide  </p>
+									<h2>Free E-Commerce Template</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/price.png"  class="pricing" alt="" />
+									<img src="images/home/gi rl1.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/prici ng.png"  class="pricing" alt="" />
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>E</span>-SHOPPER</h1>
+									<h2>100% Responsive Design</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/gir l2.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/pri cing.png"  class="pricing" alt="" />
 								</div>
 							</div>
 							
 						</div>
+						
 						
 						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
 							<i class="fa fa-angle-left"></i>
@@ -138,34 +151,34 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							</div>
 							
 						</div><!--/category-products-->
-<?php $rt=mysqli_query($con,"select * from products where category= '1'");
-$num=mysqli_num_rows($rt);{
-}
-?>	
-<?php $rt1=mysqli_query($con,"select * from products where category= '2'");
-$num1=mysqli_num_rows($rt1);{
-}
-?>	
-<?php $rt2=mysqli_query($con,"select * from products where category= '3'");
-$num2=mysqli_num_rows($rt2);{
-}
-?>	
-<?php $rt3=mysqli_query($con,"select * from products where category= '4'");
-$num3=mysqli_num_rows($rt3);{
-}
-?>	
-<?php $rt4=mysqli_query($con,"select * from products where category= '6'");
-$num4=mysqli_num_rows($rt4);{
-}
-?>	
-<?php $rt5=mysqli_query($con,"select * from products where category= '7'");
-$num5=mysqli_num_rows($rt5);{
-}
-?>	
-<?php $rt6=mysqli_query($con,"select * from products where category= '5'");
-$num6=mysqli_num_rows($rt6);{
-}
-?>					
+							<?php $rt=mysqli_query($con,"select * from products where category= '1' ");
+							$num=mysqli_num_rows($rt);{
+							}
+							?>	
+							<?php $rt1=mysqli_query($con,"select * from products where category= '2'");
+							$num1=mysqli_num_rows($rt1);{
+							}
+							?>	
+							<?php $rt2=mysqli_query($con,"select * from products where category= '3'");
+							$num2=mysqli_num_rows($rt2);{
+							}
+							?>	
+							<?php $rt3=mysqli_query($con,"select * from products where category= '4'");
+							$num3=mysqli_num_rows($rt3);{
+							}
+							?>	
+							<?php $rt4=mysqli_query($con,"select * from products where category= '6'");
+							$num4=mysqli_num_rows($rt4);{
+							}
+							?>	
+							<?php $rt5=mysqli_query($con,"select * from products where category= '7'");
+							$num5=mysqli_num_rows($rt5);{
+							}
+							?>	
+							<?php $rt6=mysqli_query($con,"select * from products where category= '5'");
+							$num6=mysqli_num_rows($rt6);{
+							}
+							?>					
 						<div class="brands_products"><!--brands_products-->
 							<h2>Recipes</h2>
 							<div class="brands-name">
@@ -188,24 +201,19 @@ $num6=mysqli_num_rows($rt6);{
 								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
 							</div>
 						</div><!--/price-range-->
-						
-						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
-						</div><!--/shipping-->
-					
 					</div>
 				</div>
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Features Items</h2>
-<?php
-$ret=mysqli_query($con,"select * from products where category=3 limit 6;");
-while ($row=mysqli_fetch_array($ret)) {
-	# code...
+							<?php
+							$ret=mysqli_query($con,"select * from products where category=3 limit 3;");
+							while ($row=mysqli_fetch_array($ret)) {
+								# code...
 
 
-?>
+							?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
@@ -237,7 +245,7 @@ while ($row=mysqli_fetch_array($ret)) {
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Features Items</h2>
 <?php
-$ret=mysqli_query($con,"select * from products where category=2 limit 6;");
+$ret=mysqli_query($con,"select * from products where category=2 limit 3;");
 while ($row=mysqli_fetch_array($ret)) {
 	# code...
 ?>
@@ -271,7 +279,7 @@ while ($row=mysqli_fetch_array($ret)) {
 	
 						<h2 class="title text-center">Features Items</h2>
 <?php
-$ret=mysqli_query($con,"select * from products where category=4 limit 6;");
+$ret=mysqli_query($con,"select * from products where category=4 limit 3;");
 while ($row=mysqli_fetch_array($ret)) {
 	# code...
 
