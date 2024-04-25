@@ -69,7 +69,7 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © <script>document.write(new Date().getFullYear())</script> E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-left">Copyright © <script>document.write(new Date().getFullYear())</script> Friends-Corner Inc. All rights reserved.</p>
 					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.facebook.com/kirupanoffcl">Kirupan Inpathas</a></span></p>
 				</div>
 			</div>

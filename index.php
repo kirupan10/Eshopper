@@ -42,7 +42,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="shortcut icon" href="images/home/logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
@@ -82,7 +82,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="/Friends-Corner"><img src="images/home/logo.png" alt="" /></a>
+							<a href="/Friends-Corner"><img src="images/home/logo.png" alt="" width="40" height="40"  />&emsp; Friends-Corner</a>
 						</div>
 						<form action="search" method="POST">
 						<div class="search_box pull-right">
@@ -138,8 +138,8 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
+									<h1><span>Friends</span>-Corner</h1>
+									<h2>BEST</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
@@ -150,8 +150,8 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
+								<h1><span>Friends</span>-Corner</h1>
+									<h2>BEST</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
