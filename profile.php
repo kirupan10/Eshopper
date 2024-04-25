@@ -126,7 +126,7 @@ include('includes/config.php');
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="/Friends-Corner"><img src="images/home/logo.png" alt="" /></a>
+						<a href="/Friends-Corner"><img src="images/home/logo.png" alt="" width="40" height="40"  />&emsp; Friends-Corner</a>
 						</div>
 						<form action="search" method="POST">
 						<div class="search_box pull-right">
