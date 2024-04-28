@@ -61,7 +61,7 @@
 	    		</div>
 	    		<div class="col-sm-4">
 	    			<div class="contact-info">
-	    				<h2 class="title text-center">Contact Info</h2>
+	    				<h2 class="title text-center">Our company</h2>
 	    				<address>
 	    					<p>Friends Corner Inc.</p>
 							<p>935 W. Webster Ave New Streets Chicago, IL 60614, NY</p>
