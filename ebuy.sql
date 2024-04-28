@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Nov 26, 2020 at 08:46 PM
--- Server version: 5.7.26
--- PHP Version: 7.2.18
+-- Host: 127.0.0.1
+-- Generation Time: Apr 28, 2024 at 06:22 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,18 +27,16 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE IF NOT EXISTS `admin` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `contactno` int(15) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updationDate` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `creationDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updationDate` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `admin`
@@ -55,15 +52,13 @@ INSERT INTO `admin` (`id`, `username`, `password`, `name`, `contactno`, `email`,
 -- Table structure for table `category`
 --
 
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE IF NOT EXISTS `category` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL,
   `categoryName` varchar(255) DEFAULT NULL,
-  `categoryDescription` longtext,
-  `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updationDate` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+  `categoryDescription` longtext DEFAULT NULL,
+  `creationDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updationDate` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `category`
@@ -84,15 +79,13 @@ INSERT INTO `category` (`id`, `categoryName`, `categoryDescription`, `creationDa
 -- Table structure for table `messages`
 --
 
-DROP TABLE IF EXISTS `messages`;
-CREATE TABLE IF NOT EXISTS `messages` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `messages` (
+  `id` int(10) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `message` varchar(30000) NOT NULL,
-  `creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `creation` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `messages`
@@ -109,18 +102,16 @@ INSERT INTO `messages` (`id`, `name`, `email`, `message`, `creation`) VALUES
 -- Table structure for table `orders`
 --
 
-DROP TABLE IF EXISTS `orders`;
-CREATE TABLE IF NOT EXISTS `orders` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
   `bill_no` int(4) DEFAULT NULL,
   `userId` int(11) DEFAULT NULL,
   `productId` varchar(255) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
-  `orderDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `orderDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `paymentMethod` varchar(50) DEFAULT NULL,
-  `orderStatus` varchar(55) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
+  `orderStatus` varchar(55) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `orders`
@@ -158,7 +149,16 @@ INSERT INTO `orders` (`id`, `bill_no`, `userId`, `productId`, `quantity`, `order
 (62, 17, 2, '17', 1, '2020-11-25 04:32:34', 'COD', NULL),
 (63, 18, 2, '12', 1, '2020-11-25 04:43:43', 'COD', NULL),
 (64, 19, 5, '17', 1, '2020-11-25 08:31:22', 'COD', NULL),
-(65, 20, 2, '1', 1, '2020-11-26 08:31:55', 'COD', NULL);
+(65, 20, 2, '1', 1, '2020-11-26 08:31:55', 'COD', NULL),
+(66, 21, 6, '17', 3, '2024-04-23 15:50:15', 'COD', NULL),
+(67, 21, 6, '18', 4, '2024-04-23 15:50:15', 'COD', NULL),
+(68, 22, 6, '17', 1, '2024-04-23 15:51:26', 'COD', NULL),
+(69, 22, 6, '18', 1, '2024-04-23 15:51:26', 'COD', NULL),
+(70, 23, 6, '17', 1, '2024-04-28 02:01:05', 'COD', NULL),
+(71, 24, 6, '19', 1, '2024-04-28 07:32:20', 'COD', NULL),
+(72, 25, 6, '18', 1, '2024-04-28 15:29:37', 'COD', NULL),
+(73, 26, 6, '17', 1, '2024-04-28 16:12:45', 'COD', NULL),
+(74, 27, 6, '17', 1, '2024-04-28 16:13:27', 'COD', NULL);
 
 -- --------------------------------------------------------
 
@@ -166,15 +166,13 @@ INSERT INTO `orders` (`id`, `bill_no`, `userId`, `productId`, `quantity`, `order
 -- Table structure for table `ordertrackhistory`
 --
 
-DROP TABLE IF EXISTS `ordertrackhistory`;
-CREATE TABLE IF NOT EXISTS `ordertrackhistory` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `ordertrackhistory` (
+  `id` int(11) NOT NULL,
   `orderId` int(11) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
-  `remark` mediumtext,
-  `postingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `remark` mediumtext DEFAULT NULL,
+  `postingDate` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `ordertrackhistory`
@@ -189,16 +187,14 @@ INSERT INTO `ordertrackhistory` (`id`, `orderId`, `status`, `remark`, `postingDa
 -- Table structure for table `productreviews`
 --
 
-DROP TABLE IF EXISTS `productreviews`;
-CREATE TABLE IF NOT EXISTS `productreviews` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `productreviews` (
+  `id` int(11) NOT NULL,
   `productId` int(11) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `review` longtext,
-  `reviewDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `review` longtext DEFAULT NULL,
+  `reviewDate` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `productreviews`
@@ -206,7 +202,8 @@ CREATE TABLE IF NOT EXISTS `productreviews` (
 
 INSERT INTO `productreviews` (`id`, `productId`, `name`, `email`, `review`, `reviewDate`) VALUES
 (1, 3, 'Shajanthan', 'BEST PRODUCT FOR ME :)', 'BEST PRODUCT WITH AFFORDABLE PRICE', '2020-07-24 16:21:18'),
-(3, 30, 'Abinesh', 'abinesh@gmail.com', 'rf', '2020-11-25 14:20:17');
+(3, 30, 'Abinesh', 'abinesh@gmail.com', 'rf', '2020-11-25 14:20:17'),
+(4, 29, 'Inpathas Kirupathas', 'ikirupan@gmail.com', 'So sweet', '2024-04-23 16:50:55');
 
 -- --------------------------------------------------------
 
@@ -214,25 +211,23 @@ INSERT INTO `productreviews` (`id`, `productId`, `name`, `email`, `review`, `rev
 -- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
   `category` int(11) NOT NULL,
   `subCategory` int(11) DEFAULT NULL,
   `productName` varchar(255) DEFAULT NULL,
   `productCompany` varchar(255) DEFAULT NULL,
   `productPrice` int(11) DEFAULT NULL,
   `productPriceBeforeDiscount` int(11) DEFAULT NULL,
-  `productDescription` longtext,
+  `productDescription` longtext DEFAULT NULL,
   `productImage1` varchar(255) DEFAULT NULL,
   `productImage2` varchar(255) DEFAULT NULL,
   `productImage3` varchar(255) DEFAULT NULL,
   `shippingCharge` int(11) DEFAULT NULL,
   `productAvailability` varchar(255) DEFAULT NULL,
-  `postingDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `updationDate` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
+  `postingDate` timestamp NULL DEFAULT current_timestamp(),
+  `updationDate` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `products`
@@ -286,15 +281,13 @@ INSERT INTO `products` (`id`, `category`, `subCategory`, `productName`, `product
 -- Table structure for table `subcategory`
 --
 
-DROP TABLE IF EXISTS `subcategory`;
-CREATE TABLE IF NOT EXISTS `subcategory` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `subcategory` (
+  `id` int(11) NOT NULL,
   `categoryid` int(11) DEFAULT NULL,
   `subcategory` varchar(255) DEFAULT NULL,
-  `creationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `updationDate` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+  `creationDate` timestamp NULL DEFAULT current_timestamp(),
+  `updationDate` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `subcategory`
@@ -340,16 +333,14 @@ INSERT INTO `subcategory` (`id`, `categoryid`, `subcategory`, `creationDate`, `u
 -- Table structure for table `userlog`
 --
 
-DROP TABLE IF EXISTS `userlog`;
-CREATE TABLE IF NOT EXISTS `userlog` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `userlog` (
+  `id` int(11) NOT NULL,
   `userEmail` varchar(255) DEFAULT NULL,
   `userip` binary(16) DEFAULT NULL,
-  `loginTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `loginTime` timestamp NULL DEFAULT current_timestamp(),
   `logout` varchar(255) DEFAULT NULL,
-  `status` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=latin1;
+  `status` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `userlog`
@@ -408,7 +399,15 @@ INSERT INTO `userlog` (`id`, `userEmail`, `userip`, `loginTime`, `logout`, `stat
 (50, 'ikirupan@gmail.com', 0x3a3a3100000000000000000000000000, '2020-11-26 10:50:34', NULL, 1),
 (51, 'ikirupan@gmail.com', 0x3a3a3100000000000000000000000000, '2020-11-26 15:27:40', NULL, 1),
 (52, 'ikirupan@gmail.com', 0x3a3a3100000000000000000000000000, '2020-11-26 15:42:54', NULL, 1),
-(53, 'ikirupan@gmail.com', 0x3a3a3100000000000000000000000000, '2020-11-26 15:43:12', NULL, 1);
+(53, 'ikirupan@gmail.com', 0x3a3a3100000000000000000000000000, '2020-11-26 15:43:12', NULL, 1),
+(54, 'admin', 0x3a3a3100000000000000000000000000, '2024-03-10 08:26:01', NULL, 0),
+(55, 'ikirupan@gmail.com', 0x3a3a3100000000000000000000000000, '2024-03-10 08:26:30', NULL, 1),
+(56, 'admin', 0x3a3a3100000000000000000000000000, '2024-04-23 10:36:25', NULL, 0),
+(57, 'admin', 0x3a3a3100000000000000000000000000, '2024-04-23 15:50:04', NULL, 1),
+(58, 'admin', 0x3a3a3100000000000000000000000000, '2024-04-28 02:00:58', NULL, 1),
+(59, 'admin', 0x3a3a3100000000000000000000000000, '2024-04-28 07:32:07', NULL, 1),
+(60, 'admin', 0x3a3a3100000000000000000000000000, '2024-04-28 15:29:33', '28-04-2024 09:39:24 PM', 1),
+(61, 'admin', 0x3a3a3100000000000000000000000000, '2024-04-28 16:09:29', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -416,25 +415,23 @@ INSERT INTO `userlog` (`id`, `userEmail`, `userip`, `loginTime`, `logout`, `stat
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `contactno` bigint(11) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `shippingAddress` longtext,
+  `shippingAddress` longtext DEFAULT NULL,
   `shippingState` varchar(255) DEFAULT NULL,
   `shippingCity` varchar(255) DEFAULT NULL,
   `shippingPincode` int(11) DEFAULT NULL,
-  `billingAddress` longtext,
+  `billingAddress` longtext DEFAULT NULL,
   `billingState` varchar(255) DEFAULT NULL,
   `billingCity` varchar(255) DEFAULT NULL,
   `billingPincode` int(11) DEFAULT NULL,
-  `regDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updationDate` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `regDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updationDate` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `users`
@@ -445,7 +442,136 @@ INSERT INTO `users` (`id`, `name`, `email`, `contactno`, `password`, `shippingAd
 (2, 'Kirupan', 'ikirupan@gmail.com', 770221046, 'Master_1006', 'Karaveddy East , Karaveddy', 'Jaffna', 'Nelliady', 40000, 'Karaveddy', 'Nothern Province', 'Nelliady', 40040, '2020-11-13 15:06:20', NULL),
 (3, 'Abinesh', 'abinesh@gmail.com', 770221049, 'Master', 'Karaveddy east , karaveddy.', 'jaffna', 'Nelliady', 50000, 'Karaveddy east , karaveddy.', 'Jaffna', 'Nelliady', 40040, '2020-11-25 08:21:44', NULL),
 (4, 'Kavin', 'Kavin@gmail.com', 770221056, 'Master', 'Karaveddy east , karaveddy.', 'Jaffna', 'Nelliady', 40040, 'Karaveddy east , karaveddy.', '40,000', 'Nelliady', 0, '2020-11-25 08:24:00', NULL),
-(5, 'Mugesh', 'Mugesh@gmail.com', 770221049, 'Mugesh', 'Karaveddy east , karaveddy.', 'jaffna', 'Nelliady', 50000, 'Karaveddy east , karaveddy.', 'Jaffna', 'Nelliady', 40040, '2020-11-25 08:26:43', NULL);
+(5, 'Mugesh', 'Mugesh@gmail.com', 770221049, 'Mugesh', 'Karaveddy east , karaveddy.', 'jaffna', 'Nelliady', 50000, 'Karaveddy east , karaveddy.', 'Jaffna', 'Nelliady', 40040, '2020-11-25 08:26:43', NULL),
+(6, 'Kirupan Inpathas', 'admin', 770221046, '123456', 'Karaveddy east , karaveddy.', '40,000', 'Nelliady', 0, 'Karaveddy east , karaveddy.', '40,000', 'Nelliady', 0, '2024-04-23 15:50:04', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ordertrackhistory`
+--
+ALTER TABLE `ordertrackhistory`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `productreviews`
+--
+ALTER TABLE `productreviews`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `subcategory`
+--
+ALTER TABLE `subcategory`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `userlog`
+--
+ALTER TABLE `userlog`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+
+--
+-- AUTO_INCREMENT for table `ordertrackhistory`
+--
+ALTER TABLE `ordertrackhistory`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `productreviews`
+--
+ALTER TABLE `productreviews`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
+--
+-- AUTO_INCREMENT for table `subcategory`
+--
+ALTER TABLE `subcategory`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `userlog`
+--
+ALTER TABLE `userlog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

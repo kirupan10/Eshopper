@@ -7,11 +7,11 @@
 						<div class="single-widget">
 							<h2>Service</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
-								<li><a href="#">FAQ’s</a></li>
+								<li><a href="profile">Profile</a></li>
+								<li><a href="contact">Contact Us</a></li>
+								<li><a href="Cart">Cart</a></li>
+								<li><a href="Wishlist">Wishlist</a></li>
+								<li><a href="">FAQ’s</a></li>
 							</ul>
 						</div>
 					</div>
@@ -43,10 +43,10 @@
 						<div class="single-widget">
 							<h2>About Shopper</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Company Information</a></li>
-								<li><a href="#">Careers</a></li>
+								<li><a href="About">Company Information</a></li>
+								<li><a href="Search">Search</a></li>
 								<li><a href="#">Store Location</a></li>
-								<li><a href="#">Affillate Program</a></li>
+								<li><a href="bill-history">Bills</a></li>
 								<li><a href="#">Copyright</a></li>
 							</ul>
 						</div>
