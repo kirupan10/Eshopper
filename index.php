@@ -139,25 +139,25 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 							<div class="item active">
 								<div class="col-sm-6">
 									<h1><span>Friends</span>-Corner</h1>
-									<h2>BEST</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h2>Free Shopping </h2>
+									<p>Unbeatable discounts, unlimited joy!. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/gi rl1.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/prici ng.png"  class="pricing" alt="" />
+									<img src="images/home/banner1.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing.png"  class="pricing" alt="" />
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
 								<h1><span>Friends</span>-Corner</h1>
-									<h2>BEST</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h2>Biggest Discount</h2>
+									<p>Shop till you drop, without dropping a dime. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/gir l2.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pri cing.png"  class="pricing" alt="" />
+									<img src="images/home/banner2.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing.png"  class="pricing" alt="" />
 								</div>
 							</div>
 						</div>
@@ -260,6 +260,10 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 								</ul>
 							</div>
 						</div><!--/brands_products-->
+
+						<div class="shipping text-center"><!--shipping-->
+							<img src="images/home/shipping.jpg" alt="" />
+						</div><!--/shipping-->
 					</div>
 				</div>
 				
