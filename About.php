@@ -31,32 +31,32 @@
     	<div class="bg">
 	    	<div class="row">    		
 	    		<div class="col-sm-12">    			   			
-					<h2 class="title text-center">Contact <strong>Us</strong></h2> 
+					<h2 class="title text-center">Our <strong>Company</strong></h2> 
 					</div>
 				</div>			 		
 			</div>    	
     		<div class="row">  	
 	    		<div class="col-sm-8">
 	    			<div class="contact-form">
-	    				<h2 class="title text-center">Get In Touch</h2>
+	    				<h2 class="title text-center">Friends Corner</h2>
 	    				<div class="status alert alert-success" style="display: none"></div>
-				    	<form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
-				            <div class="form-group col-md-6">
-				                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
-				            </div>
-				            <div class="form-group col-md-6">
-				                <input type="email" name="email" class="form-control" required="required" placeholder="Email">
-				            </div>
-				            <div class="form-group col-md-12">
-				                <input type="text" name="subject" class="form-control" required="required" placeholder="Subject">
-				            </div>
-				            <div class="form-group col-md-12">
-				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
-				            </div>                        
-				            <div class="form-group col-md-12">
-				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
-				            </div>
-				        </form>
+						<p><h1>Welcome to Friends-Corner! </h1><br>Welcome to Friends-Corner, your ultimate destination for culinary delight delivered right to your doorstep. <br><br>
+
+							At Friends-Corner, we believe that great food has the power to bring people together and create unforgettable moments. With a passion for quality and convenience, we curate a diverse selection of delectable dishes crafted by skilled chefs and trusted local eateries. <br><br>
+
+							Whether you're craving comforting classics, exploring exotic flavors, or seeking healthier options, our extensive menu has something to satisfy every palate and dietary preference. From mouthwatering appetizers to indulgent desserts, we've got you covered for every meal of the day. <br><br>
+
+							We understand the importance of convenience in today's fast-paced world. That's why we've streamlined the ordering process to make it quick, easy, and hassle-free. Simply browse our user-friendly website or mobile app, place your order with a few clicks, and sit back as we handle the rest. <br><br>
+
+							At Friends-Corner, we prioritize customer satisfaction above all else. Our dedicated team works tirelessly to ensure prompt delivery, fresh ingredients, and exceptional service with every order. Your culinary experience is our top priority, and we're committed to exceeding your expectations every time. <br><br>
+
+							Join us on a culinary journey filled with flavor, convenience, and unparalleled service. Discover why [Your Website Name] is the premier destination for food lovers everywhere. Bon appétit!</p> <br><br>
+
+						<br>
+						<br>
+						<br>
+						<br>
+						<hr>
 	    			</div>
 	    		</div>
 	    		<div class="col-sm-4">
