@@ -120,21 +120,32 @@ if($_GET['pid']){
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
 							
 						</ol>
-						
+
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Shopping Now</h2>
-									<p>Now , We're providing free shopping around island wide  </p>
+									<h1><span>Friends</span>-Corner</h1>
+									<h2>Free Shopping </h2>
+									<p>Unbeatable discounts, unlimited joy!. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/price.png"  class="pricing" alt="" />
+									<img src="images/home/banner1.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing.png"  class="pricing" alt="" />
 								</div>
 							</div>
-							
+							<div class="item">
+								<div class="col-sm-6">
+								<h1><span>Friends</span>-Corner</h1>
+									<h2>Biggest Discount</h2>
+									<p>Shop till you drop, without dropping a dime. </p>
+									<button type="button" class="btn btn-default get">Get it now</button>
+								</div>
+								<div class="col-sm-6">
+									<img src="images/home/banner2.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing.png"  class="pricing" alt="" />
+								</div>
+							</div>
 						</div>
 						
 						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
