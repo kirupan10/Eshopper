@@ -50,7 +50,7 @@
 
 							At Friends-Corner, we prioritize customer satisfaction above all else. Our dedicated team works tirelessly to ensure prompt delivery, fresh ingredients, and exceptional service with every order. Your culinary experience is our top priority, and we're committed to exceeding your expectations every time. <br><br>
 
-							Join us on a culinary journey filled with flavor, convenience, and unparalleled service. Discover why [Your Website Name] is the premier destination for food lovers everywhere. Bon appétit!</p> <br><br>
+							Join us on a culinary journey filled with flavor, convenience, and unparalleled service. Discover why Friends-Corner is the premier destination for food lovers everywhere. Bon appétit!</p> <br><br>
 
 						<br>
 						<br>
